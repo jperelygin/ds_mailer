@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form method="post">
+    {% for game in games %}
+        <input type="radio" name="game_name" value="{{ game }}">
+                <p>{{ game }}: </p>
+                <p>{{ games[game] }}</p>
+    {% endfor %}
+        <input type="submit" value="Delete">
+    </form>
+
+</body>
+</html>
