@@ -1,15 +1,20 @@
 from flask import Flask, request, render_template
 import time
 
+import processing as prcs
+
 
 app = Flask(__name__)
 
-games = {'1': 'One', '2': 'Two', '3': 'Three'}
+games = {}
 
 
 @app.route("/")
 @app.route("/", methods=['POST'])
 def page():
+    if len(games) == 0:
+        prcs.test_games()
+        prcs.get_games()
     if request.method == 'POST':
         name = request.form['game_name']
         link = request.form['link']
