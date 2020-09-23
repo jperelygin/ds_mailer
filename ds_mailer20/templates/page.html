@@ -1,0 +1,14 @@
+<!doctype html>
+<title>One Page</title>
+<body>
+    <ul>
+    {% for game in games %}
+        <h2>{{ game }} : {{ games[game] }}</h2>
+    {% endfor %}
+    </ul>
+    <form method="post">
+        <input type="text" size="40" name="game_name">
+        <input type="text" size="60" name="link"> <BR>
+        <input type="submit" value="Send">
+    </form>
+</body>

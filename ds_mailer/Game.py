@@ -13,7 +13,7 @@ class Game:
     def __check_price(self):
         try:
             if float(self.current_price) < float(self.usual_price):
-                self.usual_price = "--->\t" + self.current_price + "\t!!!"
+                self.usual_price = "---> " + self.current_price + " !!!"
         except ValueError:
             print(ValueError)
 

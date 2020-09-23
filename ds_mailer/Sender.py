@@ -11,7 +11,7 @@ def create_mail(games_arr):
     subject = f"Subject: {date} PLAYSTATION GAMES PRICES\n"
     text = subject
     for j in games_arr:
-        text += f"\n{j.name}:\t{j.usual_price}\n"
+        text += f"{j.name}: {j.usual_price}\n"
     print(text)
     return text
 
