@@ -9,4 +9,4 @@ class Sitescanner:
         page = r.text
         soup = BeautifulSoup(page, features="lxml")
         price = soup.find("h3", {"class": "price-display__price"})
-        return price.text.split(" ")[1]  # Cause it has format "RUB 4.000"
+        return price.text
