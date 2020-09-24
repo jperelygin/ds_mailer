@@ -7,7 +7,7 @@ import sys
 
 
 def create_mail(games_arr):
-    date = datetime.date.today().isoformat()
+    date = datetime.datetime.today().strftime("%d-%m-%y %H:%M")
     subject = f"Subject: {date} PLAYSTATION GAMES PRICES\n"
     text = subject
     for j in games_arr:
