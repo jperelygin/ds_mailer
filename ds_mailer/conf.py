@@ -10,7 +10,7 @@ key = os.environ['script_key']
 Database url
 ds_mailer.gamelist
 """
-DATABASE_URL = os.environ['database_url']
+DATABASE_URL = os.environ['DATABASE_URL']
 
 """
 Timezone

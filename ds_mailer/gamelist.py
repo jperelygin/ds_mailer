@@ -1,4 +1,3 @@
-import os
 import psycopg2
 from ds_mailer.Game import Game
 from ds_mailer.conf import DATABASE_URL

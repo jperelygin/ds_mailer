@@ -1,5 +1,4 @@
 from flask import Flask, request
-import os
 
 import ds_mailer.Sender as Sender
 import ds_mailer.Sitescanner
@@ -24,4 +23,9 @@ def run():
 # TODO: Make an endpoint for editing gamelist
 @app.route('/games', methods=["GET", "POST"])
 def games():
-    pass
+    if request.method == "GET" and request.args.get('key') == key:
+        pass
+    elif request.method == "POST" and request.form['key'] == key:
+        pass
+    else:
+        return "bad request\n"
