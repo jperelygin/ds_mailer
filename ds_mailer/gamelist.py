@@ -1,6 +1,6 @@
 from ds_mailer.Game import Game
 
-
+# TODO: Move to database
 GAMES = [
     Game("DARK SOULS 2. PS4 Scholar of the first sin",
          "https://store.playstation.com/ru-ru/product/EP0700-CUSA01589_00-DARKSOULS2000003",

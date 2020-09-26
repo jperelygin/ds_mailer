@@ -2,12 +2,13 @@ from ds_mailer.Sitescanner import Sitescanner
 import smtplib
 import ssl
 import datetime
+import pytz
 from sysconfig import get_config_var as gcv
 import sys
 
 
 def create_mail(games_arr):
-    date = datetime.datetime.today().strftime("%d-%m-%y %H:%M")
+    date = get_time_in_timezone('Europe/Moscow')  # TODO: Move hardcoded timezone to config file
     subject = f"Subject: {date} PLAYSTATION GAMES PRICES\n"
     text = subject
     for j in games_arr:
@@ -37,3 +38,6 @@ def run_sender(games):
     letter = create_mail(games)
     send_email(letter)
 
+
+def get_time_in_timezone(timezone):
+    return pytz.timezone(timezone).localize(datetime.datetime.today()).strftime("%d-%m-%y %H:%M")

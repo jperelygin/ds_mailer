@@ -20,3 +20,9 @@ def run():
         return text
     else:
         return "bad request\n"
+
+
+# TODO: Make an endpoint for editing gamelist
+@app.route('/games', methods=["GET", "POST"])
+def games():
+    pass
