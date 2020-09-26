@@ -4,10 +4,9 @@ import os
 import ds_mailer.Sender as Sender
 import ds_mailer.Sitescanner
 from ds_mailer.gamelist import GAMES
+from ds_mailer.conf import key
 
 app = Flask(__name__)
-
-key = os.environ['script_key']
 
 
 @app.route('/', methods=["POST"])

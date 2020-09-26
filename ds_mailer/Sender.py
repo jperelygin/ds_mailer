@@ -1,4 +1,3 @@
-from ds_mailer.Sitescanner import Sitescanner
 import smtplib
 import ssl
 import datetime
@@ -6,9 +5,12 @@ import pytz
 from sysconfig import get_config_var as gcv
 import sys
 
+from ds_mailer.Sitescanner import Sitescanner
+from ds_mailer.conf import TIMEZONE
+
 
 def create_mail(games_arr):
-    date = get_time_in_timezone('Europe/Moscow')  # TODO: Move hardcoded timezone to config file
+    date = get_time_in_timezone(TIMEZONE)
     subject = f"Subject: {date} PLAYSTATION GAMES PRICES\n"
     text = subject
     for j in games_arr:

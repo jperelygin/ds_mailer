@@ -1,4 +1,8 @@
+import os
+import psycopg2
 from ds_mailer.Game import Game
+from ds_mailer.conf import DATABASE_URL
+
 
 # TODO: Move to database
 GAMES = [
@@ -27,3 +31,11 @@ GAMES = [
          "https://store.playstation.com/ru-ru/product/EP0001-CUSA08393_00-EDITIONGLDACE000",
          "5.499")
 ]
+
+
+# Connect to DB
+def connect_to_database():
+    conn = psycopg2.connect(DATABASE_URL, ssl_mode='require')
+    return conn
+# If not exists Create Table and Move Games into
+# GET SET DELETE games

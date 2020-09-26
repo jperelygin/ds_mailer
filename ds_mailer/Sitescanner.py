@@ -2,9 +2,7 @@ import time
 from bs4 import BeautifulSoup
 import requests
 
-
-NUMBER_OF_RETRIES = 5
-DELAY_BETWEEN_TRIES = 5  # seconds
+from ds_mailer.conf import NUMBER_OF_RETRIES, DELAY_BETWEEN_TRIES
 
 
 class Sitescanner:

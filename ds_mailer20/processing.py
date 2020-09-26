@@ -2,7 +2,7 @@ import Sitescanner as Scanner
 import sqlite3
 
 
-database = 'games_db.db'
+database = ''
 table = """ CREATE TABLE IF NOT EXISTS games (
                         id integers PRIMARY KEY,
                         game text NOT NULL,
