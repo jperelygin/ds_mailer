@@ -23,12 +23,12 @@ GAMES = [
     Game("Death Stranding",
          "https://store.playstation.com/ru-ru/product/EP9000-CUSA12607_00-DEATHSTRAND00001",
          "4.499"),
-    Game("Assassin's Creed: Odyssey. Deluxe Edition",
-         "https://store.playstation.com/ru-ru/product/EP0001-CUSA12042_00-EDITIONDELUXE000",
-         "4.999"),
     Game("Assassin's Creed: Origins. Gold Edition",
          "https://store.playstation.com/ru-ru/product/EP0001-CUSA08393_00-EDITIONGLDACE000",
-         "5.499")
+         "5.499"),
+    Game("Control. Ultimate edition",
+        "https://store.playstation.com/ru-ru/product/EP4040-CUSA11454_00-CONTROLUEBUNDLE0",
+        "2.849")
 ]
 
 
